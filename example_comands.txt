@@ -1,0 +1,5 @@
+sudo docker run --name my-postgresql -e POSTGRES_PASSWORD=mypassword -d postgres
+sudo docker run -ti --link my-postgresql:postgresql -p 8080:8080 liabasb/sgt
+sudo docker ps -a
+sudo docker build -t liabasb/sgt .
+sudo docker inspect liabasb/sgt:latest
